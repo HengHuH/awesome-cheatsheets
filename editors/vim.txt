@@ -1,6 +1,6 @@
 ##############################################################################
 # VIM CHEATSHEET (中文速查表)  -  by skywind (created on 2017/10/12)
-# Version: 43, Last Modified: 2018/12/26 15:17
+# Version: 47, Last Modified: 2020/10/10 11:02
 # https://github.com/skywind3000/awesome-cheatsheets
 ##############################################################################
 
@@ -165,6 +165,8 @@ di}                 删除大括号中内容
 daB                 删除大括号内的内容（包含大括号本身）
 dit                 删除 xml tag 中的内容
 dis                 删除当前句子
+dip                 删除当前段落(前后有空白行的称为一个段落)
+dap                 删除当前段落(包括前后空白行)
 d2w                 删除下两个单词
 dt(                 删除到小括号前
 d/apple             删除到光标后的第一个apple前
@@ -214,6 +216,8 @@ vi]                 选中中括号内的东西
 viB                 选中大括号内的东西
 vi}                 选中大括号内的东西
 vis                 选中句子中的东西
+vip                 选中当前段落(前后有空白行的称为一个段落)
+vap                 选中当前段落(包括前后空白行)
 vab                 选中小括号内的东西（包含小括号本身）
 va)                 选中小括号内的东西（包含小括号本身）
 va]                 选中中括号内的东西（包含中括号本身）
@@ -248,6 +252,9 @@ aw                  整个单词（包括分隔符）
 iW                  整个 WORD（不包括分隔符）
 aW                  整个 WORD（包括分隔符）
 is                  整个句子（不包括分隔符）
+as                  整个句子（包括分隔符）
+ip                  整个段落（不包括前后空白行）
+ap                  整个段落（包括前后空白行）
 ib                  小括号内
 ab                  小括号内（包含小括号本身）
 iB                  大括号内
@@ -744,7 +751,9 @@ reddit              https://www.reddit.com/r/vim/
 - 永远不要用 CTRL-C 代替 <ESC> 完全不同的含义，容易错误中断运行的后台脚本
 - 很多人使用 CTRL-[ 代替 <ESC>，左手小指 CTRL，右手小指 [ 熟练后很方便
 - 某些终端中使用 Vim 8 内嵌终端如看到奇怪字符，使用 :set t_RS= t_SH= 解决
+- 某些终端中使用 Vim 8.2+ 会看到一些奇怪字符，使用 :set t_TI= t_TE= 解决
 - 某些终端中使用 NeoVim 如看到奇怪字符，使用 :set guicursor= 解决
+- 使用 MS-Terminal 如果进入 Vim/NVim 会默认替换模式设置 :set t_u7= 解决
 - 多使用 ciw, ci[, ci", ci( 以及 diw, di[, di", di( 命令来快速改写/删除文本
 - 在行内左右移动光标时，多使用w b e或W B E，而不是h l或方向键，这样会快很多
 - SHIFT 相当于移动加速键， w b e 移动光标很慢，但是 W B E 走的很快
@@ -761,6 +770,7 @@ reddit              https://www.reddit.com/r/vim/
 - 映射按键时，应该默认使用 noremap ，只有特别需要的时候使用 map
 - 当你觉得做某事很低效时，你应该停下来，u u u u 然后思考正确的高效方式来完成
 - 用 y复制文本后，命令模式中 CTRL-R 然后按双引号 0 可以插入之前复制内容
+- 某些情况下 Vim 绘制高亮慢，滚屏刷新慢可以试试 set re=1 使用老的正则引擎
 - Windows 下的 GVim 可以设置 set rop=type:directx,renmode:5 增强显示
 
 
@@ -779,6 +789,7 @@ http://www.lpfrx.com/wp-content/uploads/2008/09/vi.jpg
 http://michael.peopleofhonoronly.com/vim/
 https://github.com/hobbestigrou/vimtips-fortune/blob/master/fortunes/vimtips
 https://github.com/glts/vim-cottidie/blob/master/autoload/cottidie/tips
+
 
 
 # vim: set ts=4 sw=4 tw=0 noet noautoindent fdm=manual :
