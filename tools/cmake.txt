@@ -1,0 +1,39 @@
+##############################################################################
+# GIT CHEATSHEET (中文速查表)  -  by Heng (created on 2021/5/30)
+# Version: 1, Last Modified: 2021/5/30 18:00
+# https://github.com/skywind3000/awesome-cheatsheets
+##############################################################################
+
+##############################################################################
+# 命令行
+##############################################################################
+
+cmake [options] <path-to-source>
+cmake [options] <path-to-exsiting-build>
+cmake [options] -S <path-to-source> -B <path-to-build>
+    -G
+    -S
+    -B
+    -A
+    -D
+
+
+##############################################################################
+# CMakeLists.txt
+##############################################################################
+
+cmake_minimum_required
+
+project
+
+add_executable
+
+add_library
+
+target_sources
+
+target_link_libraries
+
+target_include_directoires
+
+add_subdirectory
