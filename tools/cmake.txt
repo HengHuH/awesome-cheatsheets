@@ -37,3 +37,13 @@ target_link_libraries
 target_include_directoires
 
 add_subdirectory
+
+
+# Target Properties
+
+CMAKE_SYSTEM_NAME
+CMAKE_OSX_SYSROOT
+
+PROJECT_SOURCE_DIR
+
+DEBUG_POSTFIX
